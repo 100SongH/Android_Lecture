@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             count++
             countView.text = "$count"
-        }
+        }  
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
