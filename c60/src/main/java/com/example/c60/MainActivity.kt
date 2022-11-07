@@ -1,5 +1,6 @@
 package com.example.c60
 
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -21,8 +22,14 @@ class MainActivity : AppCompatActivity() {
 
             val helper = DBHelper(this)
             val db = helper.writableDatabase
-            db.execSQL("insert into tb_memo (title, context) values (?,?)",
-                arrayOf(title, content))
+//            db.execSQL("insert into tb_memo (title, context) values (?,?)",
+//                arrayOf(title, content))
+
+            val values = ContentValues()
+            values.put("title", title)
+            values.put("content", content)
+            db.insert("tb_memo", null, values)
+
             db.close()
 
             val intent = Intent(this, ReadActivity::class.java)
