@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                 BatteryManager.BATTERY_STATUS_CHARGING -> {
                     when(getIntExtra(BatteryManager.EXTRA_PLUGGED, -1)) {
                         BatteryManager.BATTERY_PLUGGED_USB -> {
-                            isCharging = "USB Plugged"
+                             isCharging = "USB Plugged"
                         }
                         BatteryManager.BATTERY_PLUGGED_AC -> {
                             isCharging = "AC Plugged"
