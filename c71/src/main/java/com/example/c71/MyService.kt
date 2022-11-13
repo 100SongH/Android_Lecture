@@ -39,7 +39,7 @@ class MyService : Service() {
     override fun onCreate() {
         super.onCreate()
         player = MediaPlayer()
-        registerReceiver(receiver, IntentFilter("Play_TO_SERVICE"))
+        registerReceiver(receiver, IntentFilter("PLAY_TO_SERVICE"))
     }
 
     override fun onDestroy() {
