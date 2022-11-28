@@ -2,6 +2,7 @@ package com.example.c81
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.content.pm.PackageManager.PERMISSION_GRANTED
 import android.location.LocationManager
 import android.os.Bundle
 import android.widget.TextView
@@ -25,32 +26,36 @@ class MainActivity : AppCompatActivity() {
 
         val launcher = registerForActivityResult(
             ActivityResultContracts.RequestPermission()
-        ) {isGranted ->
-            if(isGranted) {
+        ){ isGranted ->
+            if(isGranted){
                 getLocation()
-            } else {
-                Toast.makeText(this, "denied..", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this, "denied..", Toast.LENGTH_LONG).show()
             }
         }
 
         val status = ContextCompat.checkSelfPermission(this,
             "android.permission.ACCESS_FINE_LOCATION")
-        if(status == PackageManager.PERMISSION_GRANTED) {
+        if(status == PackageManager.PERMISSION_GRANTED){
             getLocation()
-        } else {
+        }else {
             launcher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
         }
+
     }
 
-    fun getLocation() {
+    fun getLocation(){
         val location = manager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
-        location?.let {
+        location?.let{
             val latitude = location.latitude
             val longitude = location.longitude
             val accuracy = location.accuracy
             val time = location.time
+
             resultView.text = "$latitude, $longitude, $accuracy, $time"
         }
     }
+
+
 
 }
