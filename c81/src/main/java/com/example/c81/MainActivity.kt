@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun getLocation(){
+    private fun getLocation(){
         val location = manager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
         location?.let{
             val latitude = location.latitude
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             val accuracy = location.accuracy
             val time = location.time
 
-            resultView.text = "$latitude, $longitude, $accuracy, $time"
+            resultView.text = "$latitude\n$longitude\n$accuracy\n$time"
         }
     }
 
