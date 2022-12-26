@@ -11,6 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/c100" />
             <option value="$PROJECT_DIR$/c11" />
             <option value="$PROJECT_DIR$/c12" />
             <option value="$PROJECT_DIR$/c13" />
@@ -55,6 +56,25 @@
             <option value="$PROJECT_DIR$/c64" />
             <option value="$PROJECT_DIR$/c65" />
             <option value="$PROJECT_DIR$/c66" />
+            <option value="$PROJECT_DIR$/c68" />
+            <option value="$PROJECT_DIR$/c71" />
+            <option value="$PROJECT_DIR$/c72" />
+            <option value="$PROJECT_DIR$/c74" />
+            <option value="$PROJECT_DIR$/c75" />
+            <option value="$PROJECT_DIR$/c79" />
+            <option value="$PROJECT_DIR$/c81" />
+            <option value="$PROJECT_DIR$/c82" />
+            <option value="$PROJECT_DIR$/c83" />
+            <option value="$PROJECT_DIR$/c85" />
+            <option value="$PROJECT_DIR$/c87" />
+            <option value="$PROJECT_DIR$/c88" />
+            <option value="$PROJECT_DIR$/c90" />
+            <option value="$PROJECT_DIR$/c91" />
+            <option value="$PROJECT_DIR$/c92" />
+            <option value="$PROJECT_DIR$/c93" />
+            <option value="$PROJECT_DIR$/c94" />
+            <option value="$PROJECT_DIR$/c95" />
+            <option value="$PROJECT_DIR$/c96" />
           </set>
         </option>
       </GradleProjectSettings>
